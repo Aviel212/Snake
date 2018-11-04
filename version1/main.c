@@ -12,8 +12,8 @@ void main()
 
 	for(row=17,col=15; row>7 && row<27 && col>=-1 && col<77;count++)
 	{
-		/*if(count%10==0 && time>=50)
-			time-=50;*/	
+		/*if(count%100==0 && time>=50 && col!=0)
+			time-=50;*/
 		lastmove=moveh;
 
 		if(kbhit()) //check if a button was pressed
@@ -43,7 +43,7 @@ void main()
 			gotoxy(col+1,row+1);
 			printf(" ");
 			col++;
-			if(col>=77){
+			if(col>76){
 				gotoxy(col,row+1);
 				printf("*");
 				break;}
@@ -81,6 +81,7 @@ void main()
 			gotoxy(col+1,row+1);
 			printf("^");
 			break;
+			
 		}
 		Sleep(time);
 	}
